@@ -27,3 +27,17 @@ jobs:
 
       - name: Ejecutar tests
         run: npm test
+
+      - name: Notificar éxito en Slack
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"✅ Build exitosa para *estaciones* en `main`"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notificar error en Slack
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+          --data '{"text":"❌ Falló la build en *estaciones* en `main`"}' \
+          ${{ secrets.SLACK_WEBHOOK_URL }}
