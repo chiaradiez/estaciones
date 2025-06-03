@@ -2,7 +2,7 @@ const obtenerEstacion = require("./obtenerEstacion");
 
 describe("obtenerEstacion", () => {
   test("Meses de verano", () => {
-    expect(obtenerEstacion("diciembre")).toBe("invierno");
+    expect(obtenerEstacion("diciembre")).toBe("inviernoo");
     expect(obtenerEstacion("enero")).toBe("Verano");
     expect(obtenerEstacion("febrero")).toBe("Verano");
   });
