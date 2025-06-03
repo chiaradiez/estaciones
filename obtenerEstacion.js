@@ -1,3 +1,4 @@
+//prueba de la función obtenerEstacion
 function obtenerEstacion(mes) {
   const mesEnMinuscula = mes.toLowerCase();
 
