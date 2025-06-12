@@ -31,4 +31,4 @@ describe("obtenerEstacion", () => {
     expect(obtenerEstacion("123")).toBe("Mes inválido");
   });
 });
-//prueba
+//pruebas
